@@ -6,13 +6,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- Bootstrap 5 -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
-
     <style>
         body {
             background-color: #f4f6f9;
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
         }
-
         .thankyou-container {
             max-width: 700px;
             margin: 80px auto;
@@ -22,17 +20,14 @@
             box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
             text-align: center;
         }
-
         .thankyou-container h2 {
             color: #3E97FF;
             font-weight: bold;
         }
-
         .email-info {
             color: #555;
             font-style: italic;
         }
-
         blockquote {
             font-size: 1.1rem;
             margin-top: 20px;
@@ -42,7 +37,6 @@
             padding: 15px 20px;
             border-radius: 6px;
         }
-
         .btn-primary {
             background-color: #3E97FF;
             border: none;
@@ -50,29 +44,18 @@
     </style>
 </head>
 <body>
-
     <div class="thankyou-container">
-        <h2>Terima Kasih, lakei! 🎉</h2>
+        <h2>Terima Kasih, {{$nama}} 🎉</h2>
         <p class="lead">Pertanyaan Anda telah berhasil dikirim.</p>
-
         <blockquote>
             <strong>Pertanyaan Anda:</strong><br>
-            "Siapakah Nama Orang Tua Lakei?"
+            "{{$pertanyaan}}"
         </blockquote>
-
         <p class="email-info mt-4">
-            Pertanyaan Anda akan segera kami tanggapi dan balas melalui email <strong>budi@gmail.com</strong>.<br><br>
+            Pertanyaan Anda akan segera kami tanggapi dan balas melalui email <strong>sahara@gmail.com</strong>.<br><br>
             Mohon cek kotak masuk atau folder spam Anda secara berkala.
         </p>
-
-        <p>Nama: {{ $nama }}</p>
-
-        <p>Email: {{ $email }}</p>
-
-        <p>Pertanyaan: {{ $pertanyaan }}</p>
-
         <a href="{{ url('/') }}" class="btn btn-primary mt-4">Kembali ke Beranda</a>
     </div>
-
 </body>
 </html>
