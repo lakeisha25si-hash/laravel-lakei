@@ -22,6 +22,7 @@ class PelangganController extends Controller
      */
    public function create()
    {
+        $pelanggan = Pelanggan::all();
 		return view('admin.pelanggan.create');
    }
 
@@ -38,9 +39,9 @@ class PelangganController extends Controller
 		$data['gender'] = $request->gender;
 		$data['email'] = $request->email;
 		$data['phone'] = $request->phone;
-		
+
 		Pelanggan::create($data);
-		
+
 		return redirect()->route('pelanggan.index')->with('success','Penambahan Data Berhasil!');
     }
 

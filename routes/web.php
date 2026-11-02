@@ -10,7 +10,9 @@ use App\Http\Controllers\QuestionController;
 
 use App\Http\Controllers\DashboardController;
 
-use App\Http\Controllers\pelangganController;
+use App\Http\Controllers\PelangganController;
+
+use App\Http\Controllers\userController;
 
 Route::get('/', function () {
     return view('welcome');
@@ -51,3 +53,4 @@ Route::get('dashboard', [DashboardController::class, 'index'])->name('dashboard'
 
 Route::resource('pelanggan', PelangganController::class);
 
+route::resource('user' , userController::class);
